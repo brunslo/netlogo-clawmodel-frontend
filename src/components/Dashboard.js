@@ -3,7 +3,7 @@ import '../styles/dashboard.css';
 import {connect} from 'react-redux';
 import View from './View';
 import Sliders from './Sliders';
-import RiskModifiers from './RiskModifiers';
+// import RiskModifiers from './RiskModifiers';
 import Plots from './Plots';
 import Status from './Status';
 import {handleData} from "../actions/index";
@@ -43,7 +43,7 @@ class Dashboard extends Component {
         <div className='dashboard-body row'>
           <div className='col-2' id='params'>
             <Sliders/>
-            <RiskModifiers/>
+            {/*<RiskModifiers/>*/}
           </div>
 
           <div className='col-8'>
@@ -68,22 +68,22 @@ class Dashboard extends Component {
                   Go Once
                 </button>
               </div>
+              {/*<div className='col-2'>*/}
+                {/*<button type="button" className="btn btn-outline-primary" onClick={() => handleCommand('wave')}>*/}
+                  {/*Wave*/}
+                {/*</button>*/}
+              {/*</div>*/}
               <div className='col-2'>
-                <button type="button" className="btn btn-outline-primary" onClick={() => handleCommand('wave')}>
-                  Wave
+                <button type="button" className="btn btn-outline-primary" onClick={() => handleCommand('ask patches [ set pcolor black ]')}>
+                  Reset Patches
                 </button>
               </div>
-              <div className='col-2'>
-                <button type="button" className="btn btn-outline-primary" onClick={() => handleCommand('reset-shock')}>
-                  Reset Shock
-                </button>
-              </div>
-              <div className='col-2'>
-                <button type="button" className="btn btn-outline-primary"
-                        onClick={() => handleCommand('save-world-state')}>
-                  Save World State
-                </button>
-              </div>
+              {/*<div className='col-2'>*/}
+                {/*<button type="button" className="btn btn-outline-primary"*/}
+                        {/*onClick={() => handleCommand('save-world-state')}>*/}
+                  {/*Save World State*/}
+                {/*</button>*/}
+              {/*</div>*/}
             </div>
 
             <div id='main-chart'>

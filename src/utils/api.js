@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 function getReports() {
   return axios.get(`/api/workspace/reports`)
     .then(response => {
@@ -111,7 +110,7 @@ function formatPlots() {
 
 export function getInitialData() {
   return Promise.resolve(
-    axios.post(`/api/trust-model/setup`)
+    axios.post(`/api/model/setup`)
   ).then(() => {
     return Promise.all([
       getReports(),

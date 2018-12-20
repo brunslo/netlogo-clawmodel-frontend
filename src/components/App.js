@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {handleInitialData} from "../actions/index";
-import Nav from './Nav';
 import Dashboard from './Dashboard';
 
 class App extends Component {

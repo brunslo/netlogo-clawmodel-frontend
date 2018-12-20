@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import Loading from "./Loading";
 import {connect} from 'react-redux';
-// import {formatNumber} from "../utils/helpers";
+import {formatNumber} from "../utils/helpers";
 import '../styles/status.css';
 
 class Status extends Component {
     render() {
-        if (this.props.reports.meanClientCost_Monitor) {
+        if (typeof this.props.reports==="object") {
             return (
                 <div className='text-center status-container'>
                     <div id='status-container-header'>
@@ -34,7 +34,7 @@ class Status extends Component {
                         {/*)}*/}
                         <label>Average & Cost Per Client</label>
                         <p id='data'>
-                            <span>{this.props.reports.meanClientCost_Monitor? this.props.reports.meanClientCost_Monitor:'N/A'}</span>
+                            <span>{this.props.reports.meanClientCost_Monitor}</span>
                         </p>
 
                         <label>Clients > 5 Years</label>
@@ -44,7 +44,7 @@ class Status extends Component {
 
                         <label> Health Status</label>
                         <p id='data'>
-                            <span>{this.props.reports.meanHealthStatus_Monitor ? this.props.reports.meanHealthStatus_Monitor:'N/A'}</span>
+                            <span>{formatNumber(this.props.reports.meanHealthStatus_Monitor, 2)}</span>
                         </p>
 
                         <label>Total Clients</label>
@@ -54,7 +54,7 @@ class Status extends Component {
 
                         <label>Mean Satisfaction </label>
                         <p id='data'>
-                            <span>{this.props.reports.meanSatisfaction_Monitor ? this.props.reports.meanSatisfaction_Monitor:'N/A'}</span>
+                            <span>{formatNumber(this.props.reports.meanSatisfaction_Monitor, 2)}</span>
                         </p>
 
 
@@ -182,7 +182,7 @@ const mapStateToProps = state => {
 
     if (Object.keys(reports).length > 0) {
         const filteredReports = Object.keys(reports)
-            .filter(key => key.slice(-5) === 'Label')
+            .filter(key => key.slice(-7) === 'Monitor')
             .reduce((obj, key) => {
                 return {
                     ...obj,

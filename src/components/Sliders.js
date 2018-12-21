@@ -76,10 +76,6 @@ class Sliders extends Component {
     };
 
     handleChooserChange = (chooser, e) => {
-        const chooserName = chooser.slice(0, -8)
-            .split(/(?=[A-Z])|(?=[0-9])/)
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join('');
 
         this.props.dispatch(handleUpdateReport({
                 name: chooser,

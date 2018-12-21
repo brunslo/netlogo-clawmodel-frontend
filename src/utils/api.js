@@ -138,7 +138,7 @@ export function handleCommand(command) {
     data: command,
     config: {headers: {'Content-Type': 'application/json'}}
   }).then(() => {
-    console.log('command', command)
+    // console.log('command', command)
   })
 }
 

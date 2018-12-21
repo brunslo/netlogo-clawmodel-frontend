@@ -45,7 +45,7 @@ class Sliders extends Component {
                     name: slider,
                     value: e
                 },
-                `ask clients [ set Road_Safety_Effectiveness ${e} ]`
+                `ask clients [set Road_Safety_Effectiveness ${e}]`
             ))
         }
         // else if (slider === "recalculateDrift_Slider") {
@@ -70,7 +70,7 @@ class Sliders extends Component {
                     name: slider,
                     value: e
                 },
-                `ask clients [ set ${sliderName} ${e} ]`
+                `ask clients [set ${sliderName} ${e}]`
             ))
         }
     };
@@ -85,7 +85,7 @@ class Sliders extends Component {
                 name: chooser,
                 value: e.value
             },
-            `ask clients [ set ${chooserName} ${e.value} ]`
+            `ask clients [set Event_Type "${e.value}"]`
         ))
     };
 
@@ -215,7 +215,7 @@ const mapStateToProps = state => {
 
     if (Object.keys(reports).length > 0) {
         const filteredReports = Object.keys(reports)
-            .filter(key => key.slice(-6) === 'Slider')
+            .filter(key => key.slice(-6) === 'Slider' || key.slice(-7)==='Chooser')
             .reduce((obj, key) => {
                 return {
                     ...obj,

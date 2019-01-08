@@ -1,11 +1,26 @@
-import { getInitialData } from "../api/dashboard";
-import { receiveZones } from "./zones";
+import {getInitialData, getData} from "../utils/api";
+import {receivePlots} from "./plots";
+import {receiveView} from "./view";
+import {receiveReports} from "./reports";
 
 export function handleInitialData() {
-  return (dispatch) => {
+  return dispatch => {
     return getInitialData()
-      .then((zones) => {
-        dispatch(receiveZones(zones))
+      .then(({reports, view, plots}) => {
+        dispatch(receiveReports(reports));
+        dispatch(receiveView(view));
+        dispatch(receivePlots(plots));
+      })
+  }
+}
+
+export function handleData() {
+  return dispatch => {
+    return getData()
+      .then(({reports, view, plots}) => {
+        dispatch(receiveReports(reports));
+        dispatch(receiveView(view));
+        dispatch(receivePlots(plots));
       })
   }
 }

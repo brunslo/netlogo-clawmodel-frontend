@@ -1,0 +1,26 @@
+.status-container {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#status-container-header {
+  margin-bottom: 3rem;
+}
+
+#status-container-body {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+#status-container-body p {
+  margin-bottom: 3rem;
+}
+
+#data span {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  padding: .5rem .75rem;
+}

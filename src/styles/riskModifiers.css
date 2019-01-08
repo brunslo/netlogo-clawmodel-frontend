@@ -1,0 +1,17 @@
+#risk-modifiers-container-header {
+  margin-bottom: 3rem;
+}
+
+#risk-modifiers-container-body {
+  height: 325px;
+  overflow-y: scroll;
+}
+
+#risk-modifiers-container-body label {
+  margin-bottom: 3rem;
+}
+
+#risk-modifiers-container-body button {
+  margin-left: 8px;
+  margin-right: 8px;
+}

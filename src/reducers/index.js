@@ -1,6 +1,10 @@
-import { combineReducers } from 'redux';
-import zones from './zones';
+import {combineReducers} from 'redux';
+import reports from './reports';
+import view from './view';
+import plots from './plots';
 
 export default combineReducers({
-  zones
+  reports,
+  view,
+  plots
 })

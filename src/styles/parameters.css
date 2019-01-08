@@ -1,0 +1,19 @@
+.params-container {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#params-header {
+  margin-bottom: 3rem;
+}
+
+#params-body {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 725px;
+  overflow-y: scroll;
+}
+
+#params-body p {
+  margin-bottom: 3rem;
+}

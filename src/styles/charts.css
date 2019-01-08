@@ -1,0 +1,8 @@
+#charts-container-header {
+  margin: 1rem;
+}
+
+#charts-container-body {
+  height: 300px;
+  overflow-y: scroll;
+}

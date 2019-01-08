@@ -1,6 +1,4 @@
-#charts {
-    border-left-style: solid;
-    border-left-color: black;
-    border-right-style: solid;
-    border-right-color: black;
+#main-buttons, #helper-buttons {
+  margin-bottom: 25px;
+  margin-top: 25px;
 }

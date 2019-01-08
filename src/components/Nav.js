@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import '../styles/nav.css';
 
-export default function Nav () {
+export default function Nav() {
   return (
     <nav className='nav'>
       <ul>
